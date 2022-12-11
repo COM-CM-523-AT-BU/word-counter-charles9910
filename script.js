@@ -5,24 +5,23 @@ const findBtn = document.querySelector("#findBtn");
 const inputWord = document.querySelector("#findWordInput");
 const wordCount = document.querySelector("#wordFoundInput");
 
-// dont' forget to add event listeners to teh buttons
+// don't forget to add event listeners to the buttons
 countBtn.addEventListener("click", countWords);
 findBtn.addEventListener("click", findWords);
 
+// your code here
 function countWords() {
-  // your code here
-  // call printData
+// call printData
   var str = document.getElementById("text-area").value;
   const words = str.split(' ');
   const count = words.length;
   printData(count, textCount);
 }
 
+// put your local variable for the empty array here
 function findWords() {
-  // put your local variable for the empty array here
-  // remainder of your code follows
-  // call printData
   var foundwords = [];
+// remainder of your code follows
   var str = document.getElementById("text-area").value;
   const words = str.split(' ');
   words.forEach( (item) => {
@@ -30,13 +29,16 @@ function findWords() {
       foundwords.push(item);
     }
   });
+// call printData
   printData(foundwords.length, wordCount);
 }
 
 // change param1 and param2 to identifiers that make sense
 function printData(data, destination) {
-  // your code here... one line!
+// your code here... one line!
   destination.value = data;
+}
+
     /*
     If we add 'words' or 'instances' after the data, the code are following:
     const textForWordCount = data + " " + "words";
@@ -46,4 +48,3 @@ function printData(data, destination) {
     }else{
       destination.value = textForWordCount;
   } */
-}
